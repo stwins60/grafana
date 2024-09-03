@@ -1,0 +1,16 @@
+apiVersion: 1
+
+datasources:
+  - name: Prometheus
+    type: prometheus
+    access: proxy
+    orgId: 1
+    url: http://10.0.0.228:9090
+    basicAuth: false
+  - name: cloudwatch
+    type: cloudwatch
+    access: proxy
+    orgId: 1
+    url: http://10.0.1231.1231:9090
+    basicAuth: false
+    

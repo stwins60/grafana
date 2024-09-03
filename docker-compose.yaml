@@ -1,0 +1,16 @@
+services:
+  grafana:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./provisioning/dashboards:/etc/grafana/provisioning/dashboards
+      - ./provisioning/datasources:/etc/grafana/provisioning/datasources
+      - ./dashboards:/var/lib/grafana/dashboards
+      - ./logo/naija.svg:/usr/share/grafana/public/img/naija.svg
+      - ./logo/naija.svg:/usr/share/grafana/public/img/grafana_icon.svg
+      - ./logo/liquid-cheese.svg:/usr/share/grafana/public/img/g8_login_dark.svg
+      - ./logo/liquid-cheese.svg:/usr/share/grafana/public/img/g8_login_light.svg
+                                                                                                                                                                                                                                                                                                                                                        
